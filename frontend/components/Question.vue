@@ -234,7 +234,7 @@ export default {
         await this.fetchBrand(this.brandId)
         this.$router.push('/result')
       } catch (error) {
-        alert('予期せぬエラーが発生しました')
+        alert('データの取得に失敗しました')
       }
     },
     getResult (resKey) {

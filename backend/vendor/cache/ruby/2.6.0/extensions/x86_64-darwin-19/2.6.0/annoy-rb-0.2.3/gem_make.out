@@ -1,0 +1,292 @@
+current directory: /Users/utsumiwataru/workspace/study/work/sake_gram/backend/vendor/cache/ruby/2.6.0/gems/annoy-rb-0.2.3/ext/annoy
+/Users/utsumiwataru/.rbenv/versions/2.6.6/bin/ruby -I /Users/utsumiwataru/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210312-30169-lmbfuv.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/utsumiwataru/workspace/study/work/sake_gram/backend/vendor/cache/ruby/2.6.0/gems/annoy-rb-0.2.3/ext/annoy
+make "DESTDIR=" clean
+
+current directory: /Users/utsumiwataru/workspace/study/work/sake_gram/backend/vendor/cache/ruby/2.6.0/gems/annoy-rb-0.2.3/ext/annoy
+make "DESTDIR="
+compiling annoy.cpp
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:24:
+In file included from /Users/utsumiwataru/.rbenv/versions/2.6.6/include/ruby-2.6.0/ruby.h:33:
+In file included from /Users/utsumiwataru/.rbenv/versions/2.6.6/include/ruby-2.6.0/ruby/ruby.h:2111:
+/Users/utsumiwataru/.rbenv/versions/2.6.6/include/ruby-2.6.0/ruby/intern.h:56:19: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+void rb_mem_clear(register VALUE*, register long);
+                  ^~~~~~~~~
+/Users/utsumiwataru/.rbenv/versions/2.6.6/include/ruby-2.6.0/ruby/intern.h:56:36: warning: 'register' storage class specifier is deprecated and incompatible with C++17 [-Wdeprecated-register]
+void rb_mem_clear(register VALUE*, register long);
+                                   ^~~~~~~~~
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:25:
+./src/annoylib.h:1340:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      search_k = n * _roots.size();
+               ~ ~~^~~~~~~~~~~~~~~
+./src/annoylib.h:1112:5: note: in instantiation of member function 'AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::_get_all_nns' requested here
+    _get_all_nns(m->v, n, search_k, result, distances);
+    ^
+./src/annoylib.h:878:3: note: in instantiation of member function 'AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::get_nns_by_item' requested here
+  ~AnnoyIndex() {
+  ^
+./annoy.hpp:49:19: note: in instantiation of member function 'AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::~AnnoyIndex' requested here
+      ((T*)ptr)->~AnnoyIndex();
+                  ^
+./annoy.hpp:324:19: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_free' requested here
+    RbAnnoyIndex::annoy_index_free,
+                  ^
+./annoy.hpp:45:43: note: in instantiation of static data member 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_type' requested here
+      return TypedData_Wrap_Struct(self, &annoy_index_type, ptr);
+                                          ^
+./annoy.hpp:65:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_alloc' requested here
+      rb_define_alloc_func(rb_cAnnoyIndex, annoy_index_alloc);
+                                           ^
+annoy.cpp:25:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexAngular, double>::define_class(rb_mAnnoy, "AnnoyIndexAngular");
+                                           ^
+In file included from annoy.cpp:19:
+./annoy.hpp:183:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:72:76: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_item' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_item", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_item), 4);
+                                                                           ^
+annoy.cpp:25:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexAngular, double>::define_class(rb_mAnnoy, "AnnoyIndexAngular");
+                                           ^
+In file included from annoy.cpp:19:
+./annoy.hpp:191:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:233:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:73:78: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_vector' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_vector", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_vector), 4);
+                                                                             ^
+annoy.cpp:25:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Angular, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexAngular, double>::define_class(rb_mAnnoy, "AnnoyIndexAngular");
+                                           ^
+In file included from annoy.cpp:19:
+./annoy.hpp:241:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:25:
+./src/annoylib.h:1340:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      search_k = n * _roots.size();
+               ~ ~~^~~~~~~~~~~~~~~
+./src/annoylib.h:1112:5: note: in instantiation of member function 'AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::_get_all_nns' requested here
+    _get_all_nns(m->v, n, search_k, result, distances);
+    ^
+./src/annoylib.h:878:3: note: in instantiation of member function 'AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::get_nns_by_item' requested here
+  ~AnnoyIndex() {
+  ^
+./annoy.hpp:49:19: note: in instantiation of member function 'AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::~AnnoyIndex' requested here
+      ((T*)ptr)->~AnnoyIndex();
+                  ^
+./annoy.hpp:324:19: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_free' requested here
+    RbAnnoyIndex::annoy_index_free,
+                  ^
+./annoy.hpp:45:43: note: in instantiation of static data member 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_type' requested here
+      return TypedData_Wrap_Struct(self, &annoy_index_type, ptr);
+                                          ^
+./annoy.hpp:65:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_alloc' requested here
+      rb_define_alloc_func(rb_cAnnoyIndex, annoy_index_alloc);
+                                           ^
+annoy.cpp:26:47: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexDotProduct, double>::define_class(rb_mAnnoy, "AnnoyIndexDotProduct");
+                                              ^
+In file included from annoy.cpp:19:
+./annoy.hpp:183:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:72:76: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_item' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_item", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_item), 4);
+                                                                           ^
+annoy.cpp:26:47: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexDotProduct, double>::define_class(rb_mAnnoy, "AnnoyIndexDotProduct");
+                                              ^
+In file included from annoy.cpp:19:
+./annoy.hpp:191:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:233:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:73:78: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_vector' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_vector", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_vector), 4);
+                                                                             ^
+annoy.cpp:26:47: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, DotProduct, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexDotProduct, double>::define_class(rb_mAnnoy, "AnnoyIndexDotProduct");
+                                              ^
+In file included from annoy.cpp:19:
+./annoy.hpp:241:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:25:
+./src/annoylib.h:1340:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      search_k = n * _roots.size();
+               ~ ~~^~~~~~~~~~~~~~~
+./src/annoylib.h:1112:5: note: in instantiation of member function 'AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::_get_all_nns' requested here
+    _get_all_nns(m->v, n, search_k, result, distances);
+    ^
+./src/annoylib.h:878:3: note: in instantiation of member function 'AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::get_nns_by_item' requested here
+  ~AnnoyIndex() {
+  ^
+./annoy.hpp:49:19: note: in instantiation of member function 'AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::~AnnoyIndex' requested here
+      ((T*)ptr)->~AnnoyIndex();
+                  ^
+./annoy.hpp:324:19: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::annoy_index_free' requested here
+    RbAnnoyIndex::annoy_index_free,
+                  ^
+./annoy.hpp:45:43: note: in instantiation of static data member 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::annoy_index_type' requested here
+      return TypedData_Wrap_Struct(self, &annoy_index_type, ptr);
+                                          ^
+./annoy.hpp:65:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::annoy_index_alloc' requested here
+      rb_define_alloc_func(rb_cAnnoyIndex, annoy_index_alloc);
+                                           ^
+annoy.cpp:27:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexHamming, uint64_t>::define_class(rb_mAnnoy, "AnnoyIndexHamming");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:183:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:72:76: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::_annoy_index_get_nns_by_item' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_item", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_item), 4);
+                                                                           ^
+annoy.cpp:27:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexHamming, uint64_t>::define_class(rb_mAnnoy, "AnnoyIndexHamming");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:191:44: warning: implicit conversion loses integer precision: 'std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:233:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:73:78: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::_annoy_index_get_nns_by_vector' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_vector", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_vector), 4);
+                                                                             ^
+annoy.cpp:27:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, unsigned long long, Hamming, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, unsigned long long>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexHamming, uint64_t>::define_class(rb_mAnnoy, "AnnoyIndexHamming");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:241:44: warning: implicit conversion loses integer precision: 'std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:25:
+./src/annoylib.h:1340:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      search_k = n * _roots.size();
+               ~ ~~^~~~~~~~~~~~~~~
+./src/annoylib.h:1112:5: note: in instantiation of member function 'AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::_get_all_nns' requested here
+    _get_all_nns(m->v, n, search_k, result, distances);
+    ^
+./src/annoylib.h:878:3: note: in instantiation of member function 'AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::get_nns_by_item' requested here
+  ~AnnoyIndex() {
+  ^
+./annoy.hpp:49:19: note: in instantiation of member function 'AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::~AnnoyIndex' requested here
+      ((T*)ptr)->~AnnoyIndex();
+                  ^
+./annoy.hpp:324:19: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_free' requested here
+    RbAnnoyIndex::annoy_index_free,
+                  ^
+./annoy.hpp:45:43: note: in instantiation of static data member 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_type' requested here
+      return TypedData_Wrap_Struct(self, &annoy_index_type, ptr);
+                                          ^
+./annoy.hpp:65:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_alloc' requested here
+      rb_define_alloc_func(rb_cAnnoyIndex, annoy_index_alloc);
+                                           ^
+annoy.cpp:28:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexEuclidean, double>::define_class(rb_mAnnoy, "AnnoyIndexEuclidean");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:183:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:72:76: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_item' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_item", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_item), 4);
+                                                                           ^
+annoy.cpp:28:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexEuclidean, double>::define_class(rb_mAnnoy, "AnnoyIndexEuclidean");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:191:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:233:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:73:78: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_vector' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_vector", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_vector), 4);
+                                                                             ^
+annoy.cpp:28:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Euclidean, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexEuclidean, double>::define_class(rb_mAnnoy, "AnnoyIndexEuclidean");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:241:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+In file included from annoy.cpp:19:
+In file included from ./annoy.hpp:25:
+./src/annoylib.h:1340:20: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      search_k = n * _roots.size();
+               ~ ~~^~~~~~~~~~~~~~~
+./src/annoylib.h:1112:5: note: in instantiation of member function 'AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::_get_all_nns' requested here
+    _get_all_nns(m->v, n, search_k, result, distances);
+    ^
+./src/annoylib.h:878:3: note: in instantiation of member function 'AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::get_nns_by_item' requested here
+  ~AnnoyIndex() {
+  ^
+./annoy.hpp:49:19: note: in instantiation of member function 'AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>::~AnnoyIndex' requested here
+      ((T*)ptr)->~AnnoyIndex();
+                  ^
+./annoy.hpp:324:19: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_free' requested here
+    RbAnnoyIndex::annoy_index_free,
+                  ^
+./annoy.hpp:45:43: note: in instantiation of static data member 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_type' requested here
+      return TypedData_Wrap_Struct(self, &annoy_index_type, ptr);
+                                          ^
+./annoy.hpp:65:44: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::annoy_index_alloc' requested here
+      rb_define_alloc_func(rb_cAnnoyIndex, annoy_index_alloc);
+                                           ^
+annoy.cpp:29:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexManhattan, double>::define_class(rb_mAnnoy, "AnnoyIndexManhattan");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:183:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:72:76: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_item' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_item", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_item), 4);
+                                                                           ^
+annoy.cpp:29:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexManhattan, double>::define_class(rb_mAnnoy, "AnnoyIndexManhattan");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:191:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:233:42: warning: implicit conversion loses integer precision: 'std::__1::vector<int, std::__1::allocator<int> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+      const int sz_neighbors = neighbors.size();
+                ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+./annoy.hpp:73:78: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::_annoy_index_get_nns_by_vector' requested here
+      rb_define_method(rb_cAnnoyIndex, "get_nns_by_vector", RUBY_METHOD_FUNC(_annoy_index_get_nns_by_vector), 4);
+                                                                             ^
+annoy.cpp:29:46: note: in instantiation of member function 'RbAnnoyIndex<AnnoyIndex<int, double, Manhattan, Kiss64Random, AnnoyIndexMultiThreadedBuildPolicy>, double>::define_class' requested here
+  RbAnnoyIndex<AnnoyIndexManhattan, double>::define_class(rb_mAnnoy, "AnnoyIndexManhattan");
+                                             ^
+In file included from annoy.cpp:19:
+./annoy.hpp:241:44: warning: implicit conversion loses integer precision: 'std::__1::vector<double, std::__1::allocator<double> >::size_type' (aka 'unsigned long') to 'const int' [-Wshorten-64-to-32]
+        const int sz_distances = distances.size();
+                  ~~~~~~~~~~~~   ~~~~~~~~~~^~~~~~
+27 warnings generated.
+linking shared-object annoy/annoy.bundle
+
+current directory: /Users/utsumiwataru/workspace/study/work/sake_gram/backend/vendor/cache/ruby/2.6.0/gems/annoy-rb-0.2.3/ext/annoy
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 annoy.bundle ./.gem.20210312-30169-kj2fso/annoy
