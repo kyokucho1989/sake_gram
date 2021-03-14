@@ -8,7 +8,6 @@ export const getters = {
 
 export const mutations = {
   setBreweries: (state, breweries) => {
-    console.log(breweries)
     state.breweries = breweries
   }
 }

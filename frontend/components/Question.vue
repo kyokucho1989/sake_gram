@@ -145,21 +145,18 @@ export default {
     brandId: {
       immediate: true,
       handler (val) {
-        console.log('watch', val)
         this.fetchBrand(val)
       }
     },
     brands: {
       immediate: true,
       handler (val) {
-        console.log('watch', val[1])
         this.fetchBrewery(val[1])
       }
     },
     breweries: {
       immediate: true,
       handler (val) {
-        console.log('watch', val[1])
         this.fetchArea(val[1])
       }
     }

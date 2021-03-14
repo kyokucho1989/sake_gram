@@ -8,7 +8,6 @@ export const getters = {
 
 export const mutations = {
   setAreas: (state, areas) => {
-    console.log(areas)
     state.areas = areas
   }
 }
