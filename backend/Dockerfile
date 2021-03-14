@@ -8,6 +8,9 @@ WORKDIR /app
 
 ADD Gemfile /app/Gemfile
 
+RUN apt-get update -qq &&\
+apt-get install -y mariadb-client
+
 RUN bundle install
 
 ADD . /app
