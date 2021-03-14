@@ -26,7 +26,7 @@
             <v-layout justify-center>
               <v-card-title :id="'q-'+question.title" class="mx-auto my-5">
                 <v-btn
-                  class="mx-5"
+                  class="mx-2"
                   fab
                   light
                   large
@@ -36,7 +36,7 @@
                   5
                 </v-btn>
                 <v-btn
-                  class="mx-5"
+                  class="mx-2"
                   fab
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
@@ -45,7 +45,7 @@
                   4
                 </v-btn>
                 <v-btn
-                  class="mx-5"
+                  class="mx-2"
                   fab
                   light
                   small
@@ -55,7 +55,7 @@
                   3
                 </v-btn>
                 <v-btn
-                  class="mx-5"
+                  class="mx-2"
                   fab
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
@@ -64,7 +64,7 @@
                   2
                 </v-btn>
                 <v-btn
-                  class="mx-5"
+                  class="mx-2"
                   fab
                   light
                   large
@@ -116,7 +116,7 @@ export default {
       items: [
         { title: '簡単診断!', discription: '質問はたった10問', img: require('@/assets/phone.png') },
         { title: '新発見!?', discription: '日本酒 × 性格診断', img: require('@/assets/lights.png') },
-        { title: '豊富な診断結果！', discription: '登録銘柄3000種類以上', img: require('@/assets/sake.png') }
+        { title: '豊富な診断結果！', discription: '登録銘柄1000種類以上', img: require('@/assets/sake.png') }
       ],
       msgs: []
     }

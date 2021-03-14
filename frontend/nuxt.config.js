@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+const config = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
@@ -25,7 +25,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/vue-scrollto', ssr: false },
-    { src: '@/plugins/vue-chartjs', ssr: false }
+    { src: '@/plugins/vue-chartjs', ssr: false },
+    { src: '@/plugins/persistedState.client', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,8 +53,22 @@ export default {
       families: ['Sawarabi+Mincho']
     }
   },
+
+  proxy: {
+    '/api': {
+      target: 'http://172.20.0.1:5000',
+      pathRewrite: {
+        '^/api': '/api'
+      }
+    }
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: process.env.NODE_ENV === 'production' ? 'https://sakegram-backend.work' : 'http://localhost:5000'
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -76,5 +91,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  generate: {
+    dir: '../backend/public'
+  },
+
+  server: {
+    port: 3000,
+    host: '0.0.0.0'
   }
 }
+
+export default config
