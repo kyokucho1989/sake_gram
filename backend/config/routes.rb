@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :brands, only: %i[show]
       resources :breweries, only: %i[index show]
       resources :areas, only: %i[index show]
+      get :health_check, to: 'health_check#index'
     end
   end
 end

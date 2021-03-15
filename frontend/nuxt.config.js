@@ -56,7 +56,7 @@ const config = {
 
   proxy: {
     '/api': {
-      target: 'http://172.20.0.1:5000',
+      target: 'https://backend.sg.sakegram.site',
       pathRewrite: {
         '^/api': '/api'
       }
@@ -66,7 +66,7 @@ const config = {
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: process.env.NODE_ENV === 'production' ? 'https://sakegram-backend.work' : 'http://localhost:5000'
+      baseURL: 'https://backend.sg.sakegram.site'
     }
   },
 
