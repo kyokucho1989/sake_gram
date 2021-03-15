@@ -11,7 +11,14 @@ const config = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '性格診断でお酒と出会う' }
+      { hid: 'og:site_name', property: 'og:site_name', content: 'さけぐらむ' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://sg.sakegram.site' },
+      { hid: 'og:title', property: 'og:title', content: 'さけぐらむ' },
+      { hid: 'og:description', property: 'og:description', content: '性格診断でお酒と出会う' },
+      { hid: 'og:image', property: 'og:image', content: 'https://sg.sakegram.site/images/sakegram.png' },
+      { name: 'twitter:card', content: 'summary' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
