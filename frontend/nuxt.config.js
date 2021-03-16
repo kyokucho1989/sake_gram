@@ -4,7 +4,7 @@ const config = {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'SAKEGRAM',
+    title: 'さけぐらむ',
     htmlAttrs: {
       lang: 'en'
     },
@@ -17,14 +17,14 @@ const config = {
       { hid: 'og:url', property: 'og:url', content: 'https://sg.sakegram.site' },
       { hid: 'og:title', property: 'og:title', content: 'さけぐらむ' },
       { hid: 'og:description', property: 'og:description', content: '性格診断でお酒と出会う' },
-      { hid: 'og:image', property: 'og:image', content: '../frontend/assets/sakegram.png' },
+      { hid: 'og:image', property: 'og:image', content: '/assets/sakegram.png' },
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],      
     buildModules: [
-    '@nuxtjs/google-analytics'
+      '@nuxtjs/google-analytics'
     ],
     googleAnalytics: {
       id: 'G-FN2BT7WCLB'
@@ -69,8 +69,8 @@ const config = {
 
   proxy: {
     '/api': {
-//      target: 'https://backend.sg.sakegram.site',
-      target: 'http://localhost:5000',
+      target: 'https://backend.sg.sakegram.site',
+//      target: 'http://localhost:5000',
       pathRewrite: {
         '^/api': '/api'
       }
@@ -80,7 +80,10 @@ const config = {
 
   publicRuntimeConfig: {
     axios: {
-//      baseURL: 'https://backend.sg.sakegram.site'
+      baseURL: 'https://backend.sg.sakegram.site'
+    },
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
     }
   },
 

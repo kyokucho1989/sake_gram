@@ -85,6 +85,11 @@
           </p>
         </v-card>
       </v-col>
+    <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+      <template #activator="{ on, attrs }">
       <v-col cols="4" xs="4" sm="2" md="2" lg="1">
         <v-btn
           style="font-size: 30px"
@@ -92,14 +97,33 @@
           :disabled="isVisible"
           :ripple="{ center: false, class: 'gray--text' }"
           @click="startDiagnosis"
+          v-bind="attrs"
+          v-on="on"
         >
           診断
         </v-btn>
       </v-col>
+      </template>
+      <v-card
+        elevation="2"
+        light
+        loading
+      >
+        <v-card-title class="headline lighten-2">
+          診断中．．．
+        </v-card-title>
+        <v-card>
+        <v-img
+          :src="require('@/assets/kaiseki.png')"
+          height="400px"
+        ></v-img>
+        </v-card>
+      </v-card>
+    </v-dialog>
     </v-row>
     <p
       v-if="isVisible"
-      class="text-center red--text text--lightn-3"
+      class="text-center red--text text--lightn-3 my-5"
     >
       未回答の項目があります。
     </p>
@@ -118,7 +142,8 @@ export default {
         { title: '新発見!?', discription: '日本酒 × 性格診断', img: require('@/assets/lights.png') },
         { title: '豊富な診断結果！', discription: '登録銘柄1000種類以上', img: require('@/assets/sake.png') }
       ],
-      msgs: []
+      msgs: [],
+      dialog: false
     }
   },
   computed: {
@@ -233,6 +258,7 @@ export default {
         this.$router.push('/result')
       } catch (error) {
         alert('データの取得に失敗しました')
+        this.dialog = false
       }
     },
     getResult (resKey) {

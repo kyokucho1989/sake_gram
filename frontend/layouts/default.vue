@@ -1,5 +1,6 @@
 <template>
   <v-app v-cloak>
+    <div id="return-to-top" />
     <v-app-bar
       :clipped-left="clipped"
       fixed
@@ -37,12 +38,12 @@
               </v-btn>
             </template>
             <v-card>
-              <v-card-title class="headline grey lighten-2">
-                <v-icon>mdi-twitter</v-icon>
+              <v-card-title class="headline blue lighten-2">
+                <v-icon color="white">mdi-twitter</v-icon>
                 シェア
               </v-card-title>
-              <v-card-title>
-                Twitterでおさけとの出会いをシェアしよう！
+              <v-card-title class="headline white lighten-2">
+                お酒との出会いをシェアしよう！
               </v-card-title>
               <v-divider />
               <v-card-actions class="headline white lighten-2">
@@ -59,6 +60,12 @@
           </v-dialog>
         </div>
       </v-container>
+      <transition name="fade">
+        <v-btn fixed fab bottom right color=primary style="bottom: 100px" v-show="this.isShowUp"
+        v-scroll-to="{ element: '#return-to-top', duration: 1000 }">
+          <v-icon color="white">mdi-chevron-up</v-icon>
+        </v-btn>
+      </transition>
     </v-main>
     <v-footer>
       <v-card-text class="py-2 text-center">
@@ -104,6 +111,8 @@ export default {
       ],
       theme: false,
       dialog: false,
+      isShowUp: false,
+      drawer: false
     };
   },
   computed: {
@@ -119,6 +128,11 @@ export default {
       this.$vuetify.theme.dark = this.theme
     }
   },
+  mounted () {
+    window.addEventListener("scroll", this.onScreenEvent);
+    window.addEventListener("resize", this.onScreenEvent);
+    window.addEventListener("load", this.onScreenEvent);
+  }, 
   methods: {
     twitterShare () {
       if (this.brands[0] === undefined) {
@@ -128,7 +142,10 @@ export default {
         const shareURL = 'https://twitter.com/intent/tweet?text=' + `私をお酒で例えると${this.brands[0]}でした` + '%20%23さけぐらむ%20%23SAKEGRAM%20%23性格診断でお酒と出会う' + '&url=' + 'https://sg.sakegram.site/'
         location.href = shareURL
       }
-    }
+    },
+    onScreenEvent () {
+      this.isShowUp = window.pageYOffset >= 32;
+    } 
   }
 }
 </script>
