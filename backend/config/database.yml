@@ -18,7 +18,7 @@ default: &default
 
 development:
   <<: *default
-  host: db
+  host: localhost
   database: sakegram_development
 
 # Warning: The database defined as "test" will be erased and

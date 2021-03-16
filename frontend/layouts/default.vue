@@ -41,6 +41,9 @@
                 <v-icon>mdi-twitter</v-icon>
                 シェア
               </v-card-title>
+              <v-card-title>
+                Twitterでおさけとの出会いをシェアしよう！
+              </v-card-title>
               <v-divider />
               <v-card-actions class="headline white lighten-2">
                 <v-spacer />
@@ -85,10 +88,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 
 export default {
-  data () {
+  data() {
     return {
       clipped: false,
       fixed: false,
@@ -97,18 +100,18 @@ export default {
       rightDrawer: false,
       title: 'SAKEGRAM',
       icons: [
-        'mdi-twitter'
+        'mdi-twitter',
       ],
       theme: false,
-      idialog: false
-    }
+      dialog: false,
+    };
   },
   computed: {
     ...mapGetters(
-      'brands', ['brands']
+      'brands', ['brands'],
     ),
-    themeIcon () {
-      return this.theme ? 'mdi-bottle-wine-outline' : 'mdi-bottle-wine'
+    themeIcon() {
+      return this.theme ? 'mdi-bottle-wine-outline' : 'mdi-bottle-wine';
     }
   },
   watch: {

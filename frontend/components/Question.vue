@@ -229,6 +229,7 @@ export default {
           }
         }
         await this.fetchBrand(this.brandId)
+        this.fetchArea(this.breweries)
         this.$router.push('/result')
       } catch (error) {
         alert('データの取得に失敗しました')

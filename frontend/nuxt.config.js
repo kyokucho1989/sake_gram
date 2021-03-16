@@ -21,7 +21,7 @@ const config = {
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ],      
     buildModules: [
     '@nuxtjs/google-analytics'
@@ -69,7 +69,8 @@ const config = {
 
   proxy: {
     '/api': {
-      target: 'https://backend.sg.sakegram.site',
+//      target: 'https://backend.sg.sakegram.site',
+      target: 'http://localhost:5000',
       pathRewrite: {
         '^/api': '/api'
       }
@@ -79,7 +80,7 @@ const config = {
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: 'https://backend.sg.sakegram.site'
+//      baseURL: 'https://backend.sg.sakegram.site'
     }
   },
 
