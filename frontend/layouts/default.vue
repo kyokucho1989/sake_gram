@@ -68,16 +68,28 @@
       </transition>
     </v-main>
     <v-footer>
-      <v-card-text class="py-2 text-center">
+      <v-card class="py-2 mx-auto" color="rgba(0,0,0,0)" elevation="0">
         <v-toolbar-items>
-          <v-spacer />
+          <v-btn
+            text
+            to="/updates"
+          >
+            更新情報
+          </v-btn>
+          <v-btn
+            text
+            href="https://forms.gle/dgoqtQycgK26jbJw8"
+          >
+            お問い合わせ
+          </v-btn>
+        </v-toolbar-items>
+        <v-toolbar-items>
           <v-btn
             text
             to="/terms"
           >
             利用規約
           </v-btn>
-          <v-spacer />
           <v-btn
             text
             to="privacy_policy"
@@ -86,7 +98,7 @@
           </v-btn>
           <v-spacer />
         </v-toolbar-items>
-      </v-card-text>
+      </v-card>
       <v-card-text class="py-3 text-center">
         ©️{{ new Date().getFullYear() }} <strong>さけぐらむ</strong>
       </v-card-text>

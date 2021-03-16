@@ -17,7 +17,7 @@ const config = {
       { hid: 'og:url', property: 'og:url', content: 'https://sg.sakegram.site' },
       { hid: 'og:title', property: 'og:title', content: 'さけぐらむ' },
       { hid: 'og:description', property: 'og:description', content: '性格診断でお酒と出会う' },
-      { hid: 'og:image', property: 'og:image', content: '/assets/sakegram.png' },
+      { hid: 'og:image', property: 'og:image', content: 'https://sg.sakegram.site/sakegram.png' },
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
