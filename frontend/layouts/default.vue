@@ -18,6 +18,43 @@
     <v-main>
       <v-container>
         <nuxt />
+        <div>
+          <v-dialog
+            v-model="dialog"
+            width="500"
+          >
+            <template #activator="{ on, attrs }">
+              <v-btn
+                fixed
+                fab
+                bottom
+                color="#BDBDBD88"
+                style="bottom: 100px"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon color="white">mdi-share-variant</v-icon>
+              </v-btn>
+            </template>
+            <v-card>
+              <v-card-title class="headline grey lighten-2">
+                <v-icon>mdi-twitter</v-icon>
+                シェア
+              </v-card-title>
+              <v-divider />
+              <v-card-actions class="headline white lighten-2">
+                <v-spacer />
+                <v-btn
+                  color="primary"
+                  text
+                  @click="twitterShare"
+                >
+                  Tweet
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </div>
       </v-container>
     </v-main>
     <v-footer>
@@ -48,6 +85,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data () {
     return {
@@ -60,10 +99,14 @@ export default {
       icons: [
         'mdi-twitter'
       ],
-      theme: false
+      theme: false,
+      idialog: false
     }
   },
   computed: {
+    ...mapGetters(
+      'brands', ['brands']
+    ),
     themeIcon () {
       return this.theme ? 'mdi-bottle-wine-outline' : 'mdi-bottle-wine'
     }
@@ -71,6 +114,17 @@ export default {
   watch: {
     theme () {
       this.$vuetify.theme.dark = this.theme
+    }
+  },
+  methods: {
+    twitterShare () {
+      if (this.brands[0] === undefined) {
+        const shareURL = 'https://twitter.com/intent/tweet?text=' + 'さけぐらむで新たなお酒との出会いがありました！' + '%20%23さけぐらむ%20%23SAKEGRAM%20%23性格診断でお酒と出会う' + '&url=' + 'https://sg.sakegram.site/'
+        location.href = shareURL
+      } else {
+        const shareURL = 'https://twitter.com/intent/tweet?text=' + `私をお酒で例えると${this.brands[0]}でした` + '%20%23さけぐらむ%20%23SAKEGRAM%20%23性格診断でお酒と出会う' + '&url=' + 'https://sg.sakegram.site/'
+        location.href = shareURL
+      }
     }
   }
 }
@@ -80,5 +134,13 @@ export default {
 /* コンパイルされていない変数を隠す設定 */
 [v-cloak] {
   display: none;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

@@ -10,12 +10,13 @@
       >
         <h1
           class="text-center"
+          style="font-size: 30px"
         >
           性格診断でお酒と出会う
         </h1>
         <h1
           class="text-center"
-          style="font-size: 100px"
+          style="font-size: 60px"
         >
           さけぐらむ
         </h1>

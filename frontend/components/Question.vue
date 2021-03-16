@@ -24,9 +24,9 @@
               <p>あてはまらない</p>
             </v-card-title>
             <v-layout justify-center>
-              <v-card-title :id="'q-'+question.title" class="mx-auto my-5">
+              <v-card-title :id="'q-'+question.title">
                 <v-btn
-                  class="mx-2"
+                  class="mx-1"
                   fab
                   light
                   large
@@ -36,7 +36,7 @@
                   5
                 </v-btn>
                 <v-btn
-                  class="mx-2"
+                  class="mx-1"
                   fab
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
@@ -45,7 +45,7 @@
                   4
                 </v-btn>
                 <v-btn
-                  class="mx-2"
+                  class="mx-1"
                   fab
                   light
                   small
@@ -55,7 +55,7 @@
                   3
                 </v-btn>
                 <v-btn
-                  class="mx-2"
+                  class="mx-1"
                   fab
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
@@ -64,7 +64,7 @@
                   2
                 </v-btn>
                 <v-btn
-                  class="mx-2"
+                  class="mx-1"
                   fab
                   light
                   large
@@ -85,7 +85,7 @@
           </p>
         </v-card>
       </v-col>
-      <v-col cols="2" xs="2" sm="2" md="2" lg="2">
+      <v-col cols="4" xs="4" sm="2" md="2" lg="1">
         <v-btn
           style="font-size: 30px"
           x-large
