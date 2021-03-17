@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
@@ -33,7 +33,15 @@ export default {
     ),
     ...mapGetters(
       'areas', ['areas']
-    )
+    ),
+  },
+  mounted () {
+    this.fetchArea( this.breweries[1] )
+  },
+  methods: {
+    ...mapActions(
+      'areas', ['fetchArea']
+    ),
   }
 }
 </script>
