@@ -68,7 +68,7 @@
 - Ruby on Rails 6.0.3
 - Nuxt.js 2.14.12
 - Doker for Mac 3.2.1
-- AWS(ECR, ECS, Fargate) 
+- AWS(ECR, ECS, Fargate, Route53, ALB, RDS) 
 - さけのわデータAPI
 
 ### :gem:主なgem
