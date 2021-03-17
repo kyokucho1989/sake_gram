@@ -4,7 +4,7 @@
     <v-container>
       <v-row dense>
         <v-col
-          v-for="(item, i) in items"
+          v-for="(item, i) in reverseItems"
           :key="i"
           cols="12"
         >
@@ -32,11 +32,21 @@
     data: () => ({
       items: [
         {
-          title: 'さけぐらむβ版をリリース',
+          title: 'さけぐらむβ版をリリース🍶',
           description: 'さけぐらむβ版をリリースしました',
+          date: '2021/3/16',
+        },
+        {
+          title: 'さけぐらむをリリース🎉',
+          description: 'さけぐらむをリリースしました。性格診断から始まる、新しいお酒との出会いをお楽しみください！',
           date: '2021/3/17',
-        }
+        },
       ],
     }),
+    computed: {
+    reverseItems() {
+        return this.items.slice().reverse();
+      },
+    },
   }
 </script>

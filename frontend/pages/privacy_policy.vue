@@ -23,10 +23,10 @@
     
     <h2 class="subtitle is-4 has-text-weight-semibold mt-5">第4条（アクセス解析ツール）</h2>
     <ol class="ml-4">
-      <li>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。</li>
+      <li>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」・LogRocket社の提供するサービスである「LogRocket」を使用しています。このGoogleアナリティクス・LogRocketはデータの収集のためにCookieを使用しています。</li>
       <li>この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は
         <a target="_blank" rel="noopener noreferrer" class="has-text-grey-darker border-bottom border-secondary text-decoration-none" href="https://marketingplatform.google.com/about/analytics/terms/jp/">Googleアナリティクスサービス利用規約</a>や
-        <a target="_blank" rel="noopener noreferrer" class="has-text-grey-darker border-bottom border-secondary text-decoration-none" href="https://policies.google.com/technologies/ads?hl=ja">Googleポリシーと規約</a>・
+        <a target="_blank" rel="noopener noreferrer" class="has-text-grey-darker border-bottom border-secondary text-decoration-none" href="https://policies.google.com/technologies/ads?hl=ja">Googleポリシーと規約</a>・<a target="_blank" rel="noopener noreferrer" class="has-text-grey-darker border-bottom border-secondary text-decoration-none" href="https://logrocket.com/privacy/">LogRocketプライバシーポリシー</a>
         をご覧ください。
       </li>
     </ol>

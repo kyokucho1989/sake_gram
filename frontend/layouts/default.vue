@@ -42,11 +42,11 @@
                 <v-icon color="white">mdi-twitter</v-icon>
                 シェア
               </v-card-title>
-              <v-card-title class="headline white lighten-2">
+              <v-card-title class="headline lighten-2">
                 お酒との出会いをシェアしよう！
               </v-card-title>
               <v-divider />
-              <v-card-actions class="headline white lighten-2">
+              <v-card-actions class="headline lighten-2">
                 <v-spacer />
                 <v-btn
                   color="primary"

@@ -23,10 +23,10 @@
             診断結果
           </v-btn>
           <v-btn value="center" @click="hadleShowFlavorRadar">
-            あなたの性格
+            性格
           </v-btn>
           <v-btn value="right" @click="hadleShowSakeData">
-            {{ brands[0] }}フレーバー
+            フレーバー
           </v-btn>
           <v-btn value="Justify" @click="hadleShowSakeDetail">
             {{ brands[0] }}詳細

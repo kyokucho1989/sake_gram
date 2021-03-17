@@ -18,10 +18,11 @@ const config = {
       { hid: 'og:title', property: 'og:title', content: 'さけぐらむ' },
       { hid: 'og:description', property: 'og:description', content: '性格診断でお酒と出会う' },
       { hid: 'og:image', property: 'og:image', content: 'https://sg.sakegram.site/sakegram.png' },
-      { name: 'twitter:card', content: 'summary_large_image' }
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@watsumi_'},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/fabicon.ico' },
     ],      
     buildModules: [
       '@nuxtjs/google-analytics'
@@ -58,8 +59,14 @@ const config = {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
+    'nuxt-logrocket',
     'nuxt-webfontloader'
   ],
+
+  logRocket: {
+    logRocketId: 'hxjkjq/sakegramlog',
+    devModeAllowed: false,
+  },
 
   webfontloader: {
     google:{

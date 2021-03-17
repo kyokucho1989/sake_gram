@@ -29,7 +29,6 @@
                   class="mx-1"
                   fab
                   light
-                  large
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,5)"
                 >
@@ -39,6 +38,7 @@
                   class="mx-1"
                   fab
                   light
+                  small
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,4)"
                 >
@@ -58,6 +58,7 @@
                   class="mx-1"
                   fab
                   light
+                  small
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,2)"
                 >
@@ -67,7 +68,6 @@
                   class="mx-1"
                   fab
                   light
-                  large
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,1)"
                 >
@@ -254,8 +254,9 @@ export default {
           }
         }
         await this.fetchBrand(this.brandId)
-        this.fetchArea(this.breweries)
-        this.$router.push('/result')
+        setTimeout(
+        this.$router.push('/result'),
+        3000)
       } catch (error) {
         alert('データの取得に失敗しました')
         this.dialog = false
