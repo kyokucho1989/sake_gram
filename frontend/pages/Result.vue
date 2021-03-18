@@ -1,10 +1,23 @@
 <template>
   <v-container fluid>
+    <v-row  justify="center" align-content="center">
     <div class="text-center" style="font-size: 26px">
       あなたを日本酒に例えると、、、
       <br />
       <h1>{{ brands[0] }}</h1>です！！
     </div>
+    </v-row>
+    <v-row>
+       <v-col
+        cols="12"
+        xs="12"
+        sm="12"
+        md="12"
+        lg="12"
+      >
+        <SakeDetail />
+       </v-col>
+    </v-row>
     <v-row justify="center" align-content="center">
       <v-col
         cols="12"
@@ -28,9 +41,6 @@
           <v-btn value="right" @click="hadleShowSakeData">
             フレーバー
           </v-btn>
-          <v-btn value="Justify" @click="hadleShowSakeDetail">
-            {{ brands[0] }}詳細
-          </v-btn>
         </v-btn-toggle>
         <ResultsRadar
           v-if="isVisibleResultsRadar"
@@ -40,9 +50,6 @@
         />
         <SakeData
           v-if="isVisibleSakeData"
-        />
-        <SakeDetail
-          v-if="isVisibleSakeDetail"
         />
       </v-col>
       <Diagnosis />

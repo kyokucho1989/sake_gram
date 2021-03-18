@@ -107,7 +107,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   data() {
@@ -129,7 +129,13 @@ export default {
   },
   computed: {
     ...mapGetters(
-      'brands', ['brands'],
+      'brands', ['brands']
+    ),
+    ...mapGetters(
+      'breweries', ['breweries']
+    ),
+    ...mapGetters(
+      'areas', ['areas']
     ),
     themeIcon() {
       return this.theme ? 'mdi-bottle-wine-outline' : 'mdi-bottle-wine';
@@ -144,6 +150,7 @@ export default {
     window.addEventListener("scroll", this.onScreenEvent);
     window.addEventListener("resize", this.onScreenEvent);
     window.addEventListener("load", this.onScreenEvent);
+    this.fetchArea( this.breweries[1] )
   }, 
   methods: {
     twitterShare () {
@@ -151,19 +158,21 @@ export default {
         const shareURL = 'https://twitter.com/intent/tweet?text=' + 'さけぐらむで新たなお酒との出会いがありました！' + '%20%23さけぐらむ%20%23SAKEGRAM%20%23性格診断でお酒と出会う' + '&url=' + 'https://sg.sakegram.site/'
         location.href = shareURL
       } else {
-        const shareURL = 'https://twitter.com/intent/tweet?text=' + `私をお酒で例えると${this.brands[0]}でした` + '%20%23さけぐらむ%20%23SAKEGRAM%20%23性格診断でお酒と出会う' + '&url=' + 'https://sg.sakegram.site/'
+        const shareURL = 'https://twitter.com/intent/tweet?text=' + `私をお酒で例えると${this.areas}、${this.breweries[0]}の${this.brands[0]}です!` + `%0a%23さけぐらむ%0a%23SAKEGRAM%0a%23性格診断でお酒と出会う%0a%23${this.areas}%0a%23${this.breweries[0]}%0a%23${this.brands[0]}%0a` + '&url=' + 'https://sg.sakegram.site/'
         location.href = shareURL
       }
     },
     onScreenEvent () {
       this.isShowUp = window.pageYOffset >= 32;
-    } 
+    },
+    ...mapActions(
+      'areas', ['fetchArea']
+    ),
   }
 }
 </script>
 
 <style>
-/* コンパイルされていない変数を隠す設定 */
 [v-cloak] {
   display: none;
 }
