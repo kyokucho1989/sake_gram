@@ -1,5 +1,8 @@
 <template>
-  <v-container fluid>
+    <v-container
+    style="max-width: 1030px;
+    margin: 0 auto;"
+  >
     <v-row  justify="center" align-content="center">
     <div class="text-center" style="font-size: 26px">
       あなたを日本酒に例えると、、、

@@ -9,7 +9,6 @@
         sm="12"
         md="12"
         lg="12"
-        @click="clickScroll"
       >
         <v-card class="mx-auto my-5">
           <v-card-title class="headline">
@@ -31,6 +30,7 @@
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,5)"
+                  v-on:click="clickScroll"
                 >
                   5
                 </v-btn>
@@ -41,6 +41,7 @@
                   small
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,4)"
+                  v-on:click="clickScroll"
                 >
                   4
                 </v-btn>
@@ -51,6 +52,7 @@
                   small
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,3)"
+                  v-on:click="clickScroll"
                 >
                   3
                 </v-btn>
@@ -61,6 +63,7 @@
                   small
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,2)"
+                  v-on:click="clickScroll"
                 >
                   2
                 </v-btn>
@@ -70,6 +73,7 @@
                   light
                   :ripple="{ center: false, class: 'gray--text' }"
                   @click="countAnswer(question.title,1)"
+                  v-on:click="clickScroll"
                 >
                   1
                 </v-btn>

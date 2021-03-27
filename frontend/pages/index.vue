@@ -1,5 +1,8 @@
 <template>
-  <v-container>
+  <v-container
+    style="max-width: 1030px;
+    margin: 0 auto;"
+  >
     <v-row justify="center" align-content="center">
       <v-col
         cols="12"
@@ -68,6 +71,8 @@
           <v-btn
             class="text-center mx-auto my-10 py-5"
             light
+            block
+            x-large
             style="font-size: 30px"
             @click="hadleShowQuestions"
           >

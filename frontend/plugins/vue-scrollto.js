@@ -3,7 +3,7 @@ import VueScrollTo from 'vue-scrollto'　// 先ほどインストールしたラ
 
 // ライブラリの登録＋オプション
 Vue.use(VueScrollTo, {
-  duration: 700,
+  duration: 7000,
   easing: [0, 0, 0.1, 1],
   offset: -100
 })

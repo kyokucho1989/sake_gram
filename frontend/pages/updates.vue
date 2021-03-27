@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <v-container
+    style="max-width: 1030px;
+    margin: 0 auto;"
+  >
   <h1 class="text-center">更新情報</h1>
     <v-container>
       <v-row dense>
@@ -24,7 +27,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -55,6 +58,16 @@
           title: 'Twitter投稿の内容を修正📝',
           description: 'Twitter投稿の内容に地域名及び、蔵元の名称の表示を追加しました。',
           date: '2021/3/19',
+        },
+        {
+          title: '質問項目のスクロール動作の修正📱',
+          description: '性格診断の質問項目で、ボタン以外の箇所をクリックした際にスクロールしてしまう問題を修正しました。',
+          date: '2021/3/19',
+        },
+        {
+          title: 'レイアウトを一部修正📱',
+          description: '「診断開始」ボタンの表示サイズを拡大しました。',
+          date: '2021/3/28',
         },
       ],
     }),
