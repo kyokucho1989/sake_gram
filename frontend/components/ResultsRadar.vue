@@ -31,8 +31,8 @@ export default {
           },
           ticks: {
             display: false,
-            stepSize: 1,
-            max: 9,
+            stepSize: 2,
+            max: 10,
             beginAtZero: true
           }
         }
@@ -51,7 +51,7 @@ export default {
             data: this.chartDataValues,
             backgroundColor: 'rgba(168, 218, 236, 0.2)',
             borderColor: 'rgba(28,171,236,1)',
-            borderWidth: 1
+            borderWidth: 2
           }
         ],
         labels: this.chartLabels

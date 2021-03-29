@@ -1,6 +1,6 @@
 <template>
     <v-container
-    style="max-width: 1030px;
+    style="max-width: 600px;
     margin: 0 auto;"
   >
     <v-row  justify="center" align-content="center">

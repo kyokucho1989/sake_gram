@@ -72,13 +72,14 @@ const config = {
     '/api': {
       target: 'https://backend.sg.sakegram.site',
 //      target: 'http://localhost:5000',
+//      target: 'http://172.20.0.1:5000',
       pathRewrite: {
         '^/api': '/api'
       }
     }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-/*
+
   publicRuntimeConfig: {
     axios: {
       baseURL: 'https://backend.sg.sakegram.site'
@@ -87,7 +88,7 @@ const config = {
       id: process.env.GOOGLE_ANALYTICS_ID
     }
   },
-*/
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],

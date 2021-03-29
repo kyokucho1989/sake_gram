@@ -112,8 +112,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-attack (6.5.0)
-      rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-test (1.1.0)
@@ -210,7 +208,6 @@ DEPENDENCIES
   listen (~> 3.2)
   mysql2 (~> 0.5.3)
   puma (~> 4.1)
-  rack-attack
   rack-cors
   rails (~> 6.0.3.6)
   rspec-rails
