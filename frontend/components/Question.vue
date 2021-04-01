@@ -236,11 +236,11 @@ export default {
     },
     async startDiagnosis () {
       const targetArray = this.questions
-      const result1 = targetArray[0].answer + 5 - targetArray[5].answer
-      const result2 = targetArray[1].answer + 5 - targetArray[6].answer
-      const result3 = targetArray[2].answer + 5 - targetArray[7].answer
-      const result4 = targetArray[3].answer + 5 - targetArray[8].answer
-      const result5 = targetArray[4].answer + 5 - targetArray[9].answer
+      const result1 = targetArray[0].answer + 5 - targetArray[5].answer //外向性
+      const result2 = targetArray[1].answer + 5 - targetArray[6].answer //情緒安定性
+      const result3 = targetArray[2].answer + 5 - targetArray[7].answer //開放性
+      const result4 = targetArray[3].answer + 5 - targetArray[8].answer //誠実性
+      const result5 = targetArray[4].answer + 5 - targetArray[9].answer //調和性
       const result = [result1, result2, result3, result4, result5]
       const flavor = [result1 / 9, result5 / 9, result4 / 9, result2 / 9, (10 - result5) / 9, result3 / 9]
       const sakeFlavor = flavor.join(',')
