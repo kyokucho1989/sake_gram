@@ -1,17 +1,24 @@
-class Api::V1::ResultsController < ApplicationController
-  before_action :set_result, only: %i[show] 
+# frozen_string_literal: true
 
-  def index
-    @result = Result.all
-    render json: @result
-  end
+module Api
+  module V1
+    class ResultsController < ApplicationController
+      before_action :set_result, only: %i[show]
 
-  def show
-    render json: @result
-  end
+      def index
+        @result = Result.all
+        render json: @result
+      end
 
-  private
-  def set_result
-    @result = Result.find(params[:id])
+      def show
+        render json: @result
+      end
+
+      private
+
+      def set_result
+        @result = Result.find(params[:id])
+      end
+    end
   end
 end

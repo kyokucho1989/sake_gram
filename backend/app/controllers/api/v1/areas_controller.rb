@@ -1,18 +1,23 @@
-class Api::V1::AreasController < ApplicationController
-  before_action :set_area, only: %i[show]
+# frozen_string_literal: true
 
-  def index
-    render json: Area.all
-  end
+module Api
+  module V1
+    class AreasController < ApplicationController
+      before_action :set_area, only: %i[show]
 
-  def show
-    render json: @area.name
-  end
+      def index
+        render json: Area.all
+      end
 
-  private
+      def show
+        render json: @area.name
+      end
 
-  def set_area
-    @area = Area.find(params[:id])
+      private
+
+      def set_area
+        @area = Area.find(params[:id])
+      end
+    end
   end
 end
-  

@@ -1,13 +1,19 @@
-class Api::V1::BrandsController < ApplicationController
-  before_action :set_brand, only: %i[show]
+# frozen_string_literal: true
 
-  def show
-    render json: [@brand.name, @brand.breweryId]
-  end
+module Api
+  module V1
+    class BrandsController < ApplicationController
+      before_action :set_brand, only: %i[show]
 
-  private
+      def show
+        render json: [@brand.name, @brand.breweryId]
+      end
 
-  def set_brand
-    @brand = Brand.find(params[:id])
+      private
+
+      def set_brand
+        @brand = Brand.find(params[:id])
+      end
+    end
   end
 end

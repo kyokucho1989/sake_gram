@@ -1,18 +1,23 @@
-class Api::V1::BreweriesController < ApplicationController
-  before_action :set_brewery, only: %i[show]
+# frozen_string_literal: true
 
-  def index
-    render json: Brewery.all
-  end
+module Api
+  module V1
+    class BreweriesController < ApplicationController
+      before_action :set_brewery, only: %i[show]
 
-  def show
-    render json: [@brewery.name, @brewery.areaId]
-  end
+      def index
+        render json: Brewery.all
+      end
 
-  private
+      def show
+        render json: [@brewery.name, @brewery.areaId]
+      end
 
-  def set_brewery
-    @brewery = Brewery.find(params[:id])
+      private
+
+      def set_brewery
+        @brewery = Brewery.find(params[:id])
+      end
+    end
   end
 end
-  

@@ -1,17 +1,24 @@
-class Api::V1::FlavorsController < ApplicationController
-  before_action :set_fravor, only: %i[show]
+# frozen_string_literal: true
 
-  def index
-    @flavor = Flavor.all
-    render json: @flavor
-  end
+module Api
+  module V1
+    class FlavorsController < ApplicationController
+      before_action :set_fravor, only: %i[show]
 
-  def show
-    render json: @flavor
-  end
+      def index
+        @flavor = Flavor.all
+        render json: @flavor
+      end
 
-  private
-  def set_fravor
-    @flavor = Flavor.find(params[:id])
+      def show
+        render json: @flavor
+      end
+
+      private
+
+      def set_fravor
+        @flavor = Flavor.find(params[:id])
+      end
+    end
   end
 end
