@@ -16,7 +16,7 @@ module Api
 
       def create
         @sakedatum = Sakedatum.new(sakedatum_params)
-        @sakedata = @sakedatum.annoy
+        @sakedata = @sakedatum.annoy # 近似最近傍探索sakedatum.rb
         if @sakedatum.save
           render json: @sakedata
         else
