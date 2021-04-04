@@ -24,19 +24,6 @@ module Api
         end
       end
 
-      def update
-        if @sakedatum.update(sakedatum_params)
-          render json: @sakedatum
-        else
-          render json: @sakedatum.errors, status: :bad_request
-        end
-      end
-
-      def destroy
-        @sakedatum.destroy!
-        render json: @sakedatum
-      end
-
       private
 
       def set_sakedatum
