@@ -66,6 +66,7 @@
           <v-icon color="white">mdi-chevron-up</v-icon>
         </v-btn>
       </transition>
+      <div class="push" />
     </v-main>
     <v-footer>
       <v-card class="py-2 mx-auto" color="rgba(0,0,0,0)" elevation="0">
@@ -175,6 +176,14 @@ export default {
 <style>
 [v-cloak] {
   display: none;
+}
+.v-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.push {
+  height: 150px;
 }
 .fade-enter-active,
 .fade-leave-active {
