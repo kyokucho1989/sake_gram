@@ -46,11 +46,7 @@ const config = {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
   ],
-  googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -58,8 +54,13 @@ const config = {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     'nuxt-logrocket',
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    '@nuxtjs/google-gtag',
   ],
+  'google-gtag': {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    debug: true
+  },
 
   logRocket: {
     logRocketId: 'hxjkjq/sakegramlog',
@@ -88,9 +89,6 @@ const config = {
     axios: {
       baseURL: 'https://backend.sg.sakegram.site'
     },
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

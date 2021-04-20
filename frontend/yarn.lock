@@ -1509,12 +1509,10 @@
     consola "^2.15.0"
     eslint-webpack-plugin "^2.4.1"
 
-"@nuxtjs/google-analytics@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz#3bb9f398a05cc23340d1f423f8d8653dc4114f46"
-  integrity sha512-rDQTwHIjyjVrx8GywHPuWykJ3jRFGaHl5Iqji/y8tQWUc0yGEeHxOoR0yimzxnTS1Ph2/PubQYpgnVeEPEdL/A==
-  dependencies:
-    vue-analytics "^5.22.1"
+"@nuxtjs/google-gtag@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/@nuxtjs/google-gtag/-/google-gtag-1.0.4.tgz"
+  integrity sha512-0Xgbx1uQ9pKeV2QdU9xoxJVdgH66qyGQJ0l8pzVxz5X476qvJunj6fbcjWk0gT+MEX/VOAhfT/zw0Z1z9q9oNg==
 
 "@nuxtjs/proxy@^2.1.0":
   version "2.1.0"
@@ -7432,7 +7430,7 @@ nuxt-client-init-module@^0.3.0:
 
 nuxt-logrocket@^1.5.2:
   version "1.5.2"
-  resolved "https://registry.yarnpkg.com/nuxt-logrocket/-/nuxt-logrocket-1.5.2.tgz#f16348c3fa8d0f9acb573b4333721ff414ab630a"
+  resolved "https://registry.npmjs.org/nuxt-logrocket/-/nuxt-logrocket-1.5.2.tgz"
   integrity sha512-xm/Qfz+XIHHIuY/lug1rsakFw0ygIo1+NxQueIitrOA0l5CWvIDsL+KSqge2kCziL0ThGL5SrvUYH9MGjf3RHA==
   dependencies:
     deepmerge "^4.2.2"
@@ -10597,11 +10595,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
-
-vue-analytics@^5.22.1:
-  version "5.22.1"
-  resolved "https://registry.npmjs.org/vue-analytics/-/vue-analytics-5.22.1.tgz"
-  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
 
 vue-chartjs@^3.5.1:
   version "3.5.1"
