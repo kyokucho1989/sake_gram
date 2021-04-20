@@ -33,36 +33,24 @@
         md="4"
         lg="4"
       >
-        <v-hover v-slot="{ hover }">
-          <v-card
-            class="mx-auto"
-            light
-          >
-            <v-card-text style="font-family: 'Sawarabi Mincho', sans-serif;">
-              <p class="text-center" style="font-size: 25px">
-                {{ item.title }}
-              </p>
-              <v-expand-transition>
-                <div
-                  v-if="hover"
-                  class="text-center transition-fast-in-fast-out v-card--reveal display-2"
-                  style="height: 100%;"
-                >
-                  <hr>
-                  {{ item.discription }}
-                </div>
-              </v-expand-transition>
-              <hr>
-              <v-img
-                :src="item.img"
-                width="100%"
-                max-width="100%"
-                class="white--text align-top"
-                height="auto"
-              />
-            </v-card-text>
-          </v-card>
-        </v-hover>
+        <v-card
+          class="mx-auto"
+          light
+        >
+          <v-card-text style="font-family: 'Sawarabi Mincho', sans-serif;">
+            <p class="text-center" style="font-size: 25px">
+              {{ item.title }}
+            </p>
+            <hr>
+            <v-img
+              :src="item.img"
+              width="100%"
+              max-width="100%"
+              class="white--text align-top"
+              height="auto"
+            />
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
     <v-row justify="center" align-content="center">
@@ -100,9 +88,9 @@ export default {
       isVisible: '',
       isVisibleQuestions: false,
       items: [
-        { title: '簡単診断!', discription: '1分で完了!', img: require('@/assets/phone.png') },
-        { title: '新発見!?', discription: '日本酒 × 性格診断', img: require('@/assets/lights.png') },
-        { title: '豊富な診断結果！', discription: '登録銘柄1000種類', img: require('@/assets/sake.png') }
+        { title: '簡単診断!', img: require('@/assets/phone.png') },
+        { title: '新発見!?', img: require('@/assets/lights.png') },
+        { title: '豊富な診断結果！', img: require('@/assets/sake.png') }
       ]
     }
   },
