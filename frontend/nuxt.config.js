@@ -75,9 +75,10 @@ const config = {
 
   proxy: {
     '/api': {
-      target: 'https://backend.sg.sakegram.site',
-//      target: 'http://localhost:5000',
-//      target: 'http://172.20.0.1:5000',
+      // target: 'https://sakegram-backend.herokuapp.com/',
+    //  target: 'https://backend.sg.sakegram.site',
+     target: 'http://localhost:5000',
+    //  target: 'http://172.20.0.1:5000',
       pathRewrite: {
         '^/api': '/api'
       }
@@ -87,7 +88,8 @@ const config = {
 
   publicRuntimeConfig: {
     axios: {
-      baseURL: 'https://backend.sg.sakegram.site'
+  //    baseURL: 'https://backend.sg.sakegram.site'
+      baseURL: 'https://sakegram-backend.herokuapp.com/'
     },
   },
 
@@ -115,8 +117,10 @@ const config = {
   },
 
   generate: {
-    dir: '../backend/public'
+    dir: 'dist'
   },
+
+  target: 'static',
 
   server: {
     port: 3000,
