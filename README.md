@@ -83,7 +83,7 @@
 - vuex-persistedstate（VuexのステートをWebストレージに保存）
 
 
-## インフラ構成図
+## インフラ構成図(現在はHerokuに移行)
 ![sakegram](https://user-images.githubusercontent.com/67275879/111503647-43f07200-878a-11eb-84e1-7fcbf415c699.png)
 
 ## :green_book:関連記事
