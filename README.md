@@ -83,14 +83,7 @@
 - vuex-persistedstate（VuexのステートをWebストレージに保存）
 
 
-## インフラ構成図(現在はHerokuに移行)
-![sakegram](https://user-images.githubusercontent.com/67275879/111503647-43f07200-878a-11eb-84e1-7fcbf415c699.png)
-
 ## :green_book:関連記事
 ### Qiita
 #### [【個人開発】性格診断でお酒と出会う新サービス、「さけぐらむ🍶」リリースしました！🎉🎉](https://qiita.com/watsumi_/items/cd77a0f2ec3630d550f8)
  
-### ブログ
-#### [【Nuxt】DockerでNuxt.jsを導入する際にハマったことまとめ](https://bon-voyage23.hatenablog.com/entry/2021/03/11/234039)
-#### [DockerでNuxt.jsからRailsAPIを叩いたら「[HPM] Error occurred while trying to proxy request」にハマった話](https://bon-voyage23.hatenablog.com/entry/2021/03/13/230549)
-#### [【Nuxt.js】と【Rails】を連携させて【AWS】でデプロイするときのハマりポイントまとめ](https://bon-voyage23.hatenablog.com/entry/2021/03/16/081025)
